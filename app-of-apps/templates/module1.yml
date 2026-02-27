@@ -27,7 +27,7 @@ spec:
       - CreateNamespace=true
       - RespectIgnoreDifferences=true
   source:
-    repoURL: 'https://github.com/learn-quarkus/quarkus-beginners-helm.git'
+    repoURL: 'https://github.com/ryanj/quarkus-beginners-helm.git'
     targetRevision: 'main'
     path: module1
     helm:
