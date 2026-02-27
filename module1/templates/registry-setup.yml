@@ -15,9 +15,9 @@ spec:
           - /bin/bash
           - '-c'
           - |
-            oc patch configs.imageregistry.operator.openshift.io cluster --type=merge   -p '{"spec":{"managementState":"Managed","storage":{"emptyDir":{}}}}'
+            oc patch configs.imageregistry.operator.openshift.io cluster --type=merge   -p '{"spec":{"managementState":"Managed","storage":{"managementState":"Managed","pvc":{"claim":"image-registry-storage"}}}}'
             oc -n openshift-image-registry patch configs.imageregistry.operator.openshift.io/cluster --patch '{"spec":{"defaultRoute":true}}' --type=merge
-        image: quay.io/openshift/origin-cli:4.16
+        image: quay.io/openshift/origin-cli:4.19
         volumeMounts:
           - mountPath: /scripts
             name: create-image-registry-vol
