@@ -6,7 +6,7 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "-1"
 spec:
-  storageClassName: ocs-external-storagecluster-cephfs
+  storageClassName: ocs-external-storagecluster-ceph-rbd
   accessModes: [ "ReadWriteMany" ]
   resources:
     requests: 
